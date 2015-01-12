@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+	<!-- 字符集过滤器 -->
+	<filter>
+		<filter-name>characterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>characterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- OpenSessionView延长session周期 与数据库做交互的--> 
+	<!-- 
+	<filter>
+		<filter-name>openSessionInView</filter-name>
+		<filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>openSessionInView</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 -->
+	
+	<!-- SpringMVC Controller -->
+	  <servlet>
+	  	<servlet-name>springmvc</servlet-name><!-- 这里的名字要和mvc配置文件mvc-servlet的名字前缀相同 -->
+	  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	  	<load-on-startup>1</load-on-startup><!-- 希望容器启动时就加载 -->
+	  </servlet>
+	  <servlet-mapping>
+	  	<servlet-name>springmvc</servlet-name>
+	  	<url-pattern>/</url-pattern><!-- 过滤所有的请求 -->
+	  </servlet-mapping>
+	  <display-name>Archetype Created Web Application</display-name>
+		
+	<!-- spring容器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext*.xml</param-value>
+	</context-param>
+</web-app>
+
+ 
+

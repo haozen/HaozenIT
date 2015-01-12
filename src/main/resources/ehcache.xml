@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+<!--缓存的临时目录-->
+    <diskStore path="java.io.tmpdir"/>
+
+    
+<!--缓存容量-->
+<!--缓存的永久性设置(如果为true会导致 下面两个的时间设置无效)-->
+<!--闲置时间(最后访问时间-当前时间)-->
+<!--存活时间(当前时间-创建时间)-->
+<!--当内存不够时，是否存入硬盘-->
+	<defaultCache
+		maxElementsInMemory="1000"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		overflowToDisk="true"
+	/>
+	
+	<!-- 当缓存与默认值不同时，自己设置缓存
+	<cache name="com.haozen.entity.User"
+		maxElementsInMemory="100"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		overflowToDisk="true"
+	/>
+	 -->
+</ehcache>
