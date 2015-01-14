@@ -6,14 +6,11 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
-import org.omg.CORBA.Request;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.haozen.entity.City;
 import com.haozen.entity.Platform;
 import com.haozen.service.PlatformService;
 import com.haozen.util.PropertyFilter;

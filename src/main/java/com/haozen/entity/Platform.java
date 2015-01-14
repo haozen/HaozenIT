@@ -1,10 +1,7 @@
 package com.haozen.entity;
 
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -20,7 +17,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Table(name="t_platform")
 @Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
-public class Platform{
+public class Platform extends IdEntity{
 
 	private static final long serialVersionUID = 1L;
 	private String platurl;
@@ -38,19 +35,7 @@ public class Platform{
 	private String platstoremoney;
 	private String createtime;
 	private City city;
-	@Column(name="platform_id")
-	private Integer id;
-
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY )
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
+	
 	@ManyToOne
 	@JoinColumn(name="cityid")
 	public City getCity() {

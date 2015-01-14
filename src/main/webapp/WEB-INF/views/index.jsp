@@ -12,7 +12,7 @@
     </head>
   <body>
   
-  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <nav class="navbar navbar-default navbar-static-top" >
 	  <div class="container">
 	  	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    <ul class="nav navbar-nav navbar-right">
@@ -35,9 +35,9 @@
 	  <br>
 	  <div class="row">	  
 	  	    <div class="col-md-1"></div>
-		  	<form role="search" action="/platform/search" method="post">
+		  	<form action="/platform/search" method="post">
 				<div class="col-md-2">
-					<input class="form-control" type="text"  name="q_eq_s_city" value="${q_eq_s_city}" placeholder="例:上海"  >
+					<input class="form-control" type="text"  name="q_eq_i_city.id" value="1" placeholder="例:上海"  >
 				</div>			  		
 				<div class="col-md-2">
 					<input class="form-control" type="text"  name="q_like_s_platcompanyaddress" value="${q_like_s_platcompanyaddress}" placeholder="例:上海市青浦区"/>

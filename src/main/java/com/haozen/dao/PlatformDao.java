@@ -12,7 +12,8 @@ import com.haozen.util.PropertyFilter;
 
 @Named
 public class PlatformDao extends BaseDao<Platform>{
-	
+
+	@SuppressWarnings("unused")
 	@Inject
 	private CityDao cityDao;
 	
@@ -21,7 +22,7 @@ public class PlatformDao extends BaseDao<Platform>{
 	public List<Platform> findListByPropertyfilter(List<PropertyFilter> filterList ,String orderByProperty,String orderBytype){
 		
 		//platform实体和city实体做关联
-		Criteria c = getSession().createCriteria(Platform.class).createAlias("city", "city");
+		Criteria c = getSession().createCriteria(Platform.class).createAlias("city", "c");
 		return  super.findListByPropertyfilter(c,filterList,orderByProperty,orderBytype);
 	}
 	

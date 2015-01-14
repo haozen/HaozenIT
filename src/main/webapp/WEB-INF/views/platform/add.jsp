@@ -12,7 +12,7 @@
     </head>
   <body>
   
-  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <nav class="navbar navbar-default navbar-static-top" >
 	  <div class="container">
 	  	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    <ul class="nav navbar-nav navbar-right">
@@ -25,7 +25,7 @@
   <div class="container">
   		  	
 	  <div class="platform">
-	  	<form class="navbar-form navbar-left" role="search" action="/platform/platurl" method="post">
+	  	<form class="navbar-form navbar-left"  action="/platform/platurl" method="post">
 		  		<input class="form-control" type="text" name="platformname" placeholder="如:沪琛投资" >
 			  	<input class="form-control" type="text" name="platurl" placeholder="如:http://360cb.net/"/> 	
 			  	<button type="submit" class="btn btn-default">添加</button>

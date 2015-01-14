@@ -16,6 +16,7 @@ public class DateTimeUtil {
 		return sdf.format(date);
 	}
 	public static String get(String time) {
+		@SuppressWarnings("deprecation")
 		Date date = new Date(time);
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		return sdf.format(date);
